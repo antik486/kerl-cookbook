@@ -9,7 +9,7 @@ script "install kerl from github" do
   interpreter "bash"
   kerl = "#{node['kerl']['installpath']}/kerl"
   code <<-EOS
-    curl -sLf https://raw.github.com/spawngrid/kerl/master/kerl -o #{kerl}
+    curl -sLf https://raw.githubusercontent.com/spawngrid/kerl/master/kerl -o #{kerl}
     chmod +x #{kerl}
   EOS
   not_if "test -f #{kerl}"
